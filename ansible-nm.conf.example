@@ -3,7 +3,7 @@
 # Follow bash syntax
 
 # The non-root user to create, who will use Ansible on the Node Manager
-# This user will be added the sudoers (nominatively)
+# This user will be added the sudoers (group 'sudo')
 # For future simplicity, this username may be the same than the sudoer on managed hosts
 ansible_user='myuser'
 
