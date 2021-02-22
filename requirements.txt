@@ -1,0 +1,4 @@
+# Add whatever you want here to fit your needs
+netaddr
+jmespath
+jsondiff

@@ -1,0 +1,15 @@
+# ansible-nm.conf is ignored from git tracking
+# Rename this file without the .example extension and adapt it to your needs
+# Follow bash syntax
+
+# The non-root user to create, who will use Ansible on the Node Manager
+# This user will be added the sudoers (nominatively)
+# For future simplicity, this username may be the same than the sudoer on managed hosts
+ansible_user='myuser'
+
+# This is where ansible will be installed
+# This directory will contain subdirectories for each ansible version
+# e.g.:
+# /home/myuser/ansible/2.9
+# /home/myuser/ansible/2.10
+ansible_install_dir='/home/myuser/ansible'
