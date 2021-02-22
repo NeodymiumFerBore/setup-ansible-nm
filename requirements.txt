@@ -1,4 +1,4 @@
-# Add whatever you want here to fit your needs
+# Add whatever you want here to fit your needs (pip requirements, eg your ansible modules dependencies)
 netaddr
 jmespath
 jsondiff
