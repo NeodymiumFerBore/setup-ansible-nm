@@ -40,11 +40,12 @@ ansible_dir="${ansible_install_dir}"/"${ansible_version}"
 t=$(ls -1 "$HOME"/.ssh/id_* 2>/dev/null | wc -l 2>/dev/null)
 if [ $t -eq 0 ]; then
     echo -ne "No ssh key found in $HOME/.ssh/. Creating one...\n"
+    [ ! -d "$HOME"/.ssh ] && mkdir -p "$HOME"/.ssh
     # If in non-interactive mode, do not prompt for passphrase and generate clear text private key
     if grep i <<<"$-"; then
         ssh-keygen -t rsa -b 4096
     else
-        ssh-keygen -t rsa -b 4096 -N ""
+        ssh-keygen -t rsa -b 4096 -N "" -f "$HOME"/.ssh/id_rsa
     fi
 else
     echo "Found ssh key(s) in $HOME/.ssh/. Skipping creation"
